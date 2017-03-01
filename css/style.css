@@ -1,0 +1,111 @@
+body, .jumbotron { padding: 30px; }
+
+body {
+	background-image: url('../img/milkyway.jpg');
+	background-size: cover;
+}
+
+.content {
+	font-size: 19px;
+	line-height: 1.5;
+	max-width: 500px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.floater {
+	background: #FFFFFF;
+	transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.4) all;
+	margin-bottom: 30px;
+}
+
+.floater input[type=text] {
+	padding: 30px 20px;
+	border: none;
+	box-shadow: none;
+	font-size: 14px;
+	transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.4) all;
+}
+
+.floater-bottom {
+	padding: 6px 10px 10px 8px;
+	text-align: right;
+	border-top: 1px solid #DDDDDD;
+}
+
+.floater-bottom button {
+	padding: 4px 8px;
+	font-size: 10px;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.80);
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+
+}
+
+body.show-floater floater {
+	transform: scale(1.1);
+}
+
+body.show-floater .floater input[type=text] {
+	padding: 50px 20px;
+	font-size: 10px;
+}
+
+body.show-floater .overlay {
+	opacity: 1;
+}
+
+
+
+/*====================*/
+.bookmark {
+	display: block;
+	background: #FFFFFF;
+	color: #999999;
+	padding: 20px;
+	transition: 0.3s ease all;
+	border-bottom: 1px solid #DDDDDD;
+
+}
+
+.bookmark:first-child {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.bookmark:last-child {
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
