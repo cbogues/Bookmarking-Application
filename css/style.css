@@ -11,12 +11,14 @@ body {
 	max-width: 500px;
 	margin: 0 auto;
 	position: relative;
+	border-radius: 5px;
 }
 
 .floater {
 	background: #FFFFFF;
 	transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.4) all;
 	margin-bottom: 30px;
+
 }
 
 .floater input[type=text] {
@@ -49,7 +51,7 @@ body {
 
 }
 
-body.show-floater floater {
+body.show-floater .floater {
 	transform: scale(1.1);
 }
 
@@ -72,7 +74,12 @@ body.show-floater .overlay {
 	padding: 20px;
 	transition: 0.3s ease all;
 	border-bottom: 1px solid #DDDDDD;
+	font-size: 16px;
+}
 
+.bookmark:hover {
+	color: #1CE;
+	text-decoration: none;
 }
 
 .bookmark:first-child {
@@ -83,7 +90,10 @@ body.show-floater .overlay {
 .bookmark:last-child {
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
+	border-bottom: 0;
+
 }
+
 
 
 
