@@ -18,6 +18,7 @@ body {
 	background: #FFFFFF;
 	transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.4) all;
 	margin-bottom: 30px;
+	z-index: 11;
 
 }
 
@@ -48,11 +49,14 @@ body {
 	width: 100%;
 	height: 100%;
 	opacity: 0;
+	z-index: 10;
+	pointer-events: none;
 
 }
 
 body.show-floater .floater {
 	transform: scale(1.1);
+	pointer-events: all;
 }
 
 body.show-floater .floater input[type=text] {
@@ -67,6 +71,11 @@ body.show-floater .overlay {
 
 
 /*====================*/
+
+.bookmarks-list {
+	position: relative;
+	z-index: 9;
+}
 .bookmark {
 	display: block;
 	background: #FFFFFF;

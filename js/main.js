@@ -1,7 +1,7 @@
 (function() {
 
 	const body = document.body;
-	const input = document.querySelector('input[type=next]');
+	const input = document.querySelector('input[type=text]');
 	const overlay = document.querySelector('.overlay');
 
 	function showFloater() {
@@ -16,9 +16,9 @@
 	}
 
  	input.addEventListener('focus', showFloater);
- 	console.log(input);
+ 	// console.log(input);
     input.addEventListener('blur', closeFloater);
-    console.log(input);
+    // console.log(input);
     overlay.addEventListener('click', closeFloater);
 
 
@@ -31,12 +31,36 @@
 	function createBookmark(e) {
 	e.preventDefault();
 
-	console.log('processing the form');
+	// grab info out of the input and create element of the bookmark
+	const title  = bookmarkInput.value;
+	const bookmark = document.createElement('a');
+	bookmark.className = 'bookmark';
+	bookmark.innerText = title;
+	bookmark.href = '#';
+	bookmark.target = '_blank';
+	bookmarksList.appendChild(bookmark);
+
+	// clear bookmark form
+	
+	bookmarkForm.reset();
+
 	}
 
 
 
 	bookmarkForm.addEventListener('submit', createBookmark);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 })();
