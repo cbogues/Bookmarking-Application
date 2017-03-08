@@ -77,8 +77,9 @@ body.show-floater .overlay {
 	z-index: 9;
 }
 .bookmark {
-	display: block;
+	display: flex;
 	background: #FFFFFF;
+	position: relative;
 	color: #999999;
 	padding: 20px;
 	transition: 0.3s ease all;
@@ -103,6 +104,35 @@ body.show-floater .overlay {
 
 }
 
+
+.bookmark .img {
+	background-color: #DDDDDD;
+	border-radius: 3px;
+	background-image:url('https://avatars3.githubusercontent.com/u/3903409?v=3&s=460');
+	background-size: cover;
+	width: 80px;
+	height: 60px;
+	margin-right: 20px;
+}
+
+.bookmark .title {
+	display: flex;
+	align-items: center;
+}
+
+.bookmark .glyphicon-remove {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #EEEEEE;
+	font-size: 17px;
+	transition: 0.3s ease color;
+	cursor: pointer;
+}
+
+.bookmark:hover .glyphicon-remove {
+	color: #AAAAAA;
+}
 
 
 

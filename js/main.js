@@ -74,13 +74,15 @@
 	// take a parameter 'bookmarks' if there are no bookmarks
 	// default to blank array. For each of these bookmarks add it to the list
 	function fillBookmarksList(bookmark = []) {
-		const bookmarksHtml = bookmarks.map((bookmark) => {
+		const bookmarksHtml = bookmarks.map((bookmark, i) => {
 		return	` 
-			<a href="#" class="bookmark">
-			${bookmark.title}
+			<a href="#" class="bookmark" data-id="${i}">
+			<div class="img"></div>
+			<div class="title">${bookmark.title}</div>
+			<span class="glyphicon glyphicon-remove"></span>
 			</a>
-			`;
-		}).join(' ');
+		`;
+	}).join(' ');
 
 	bookmarksList.innerHTML = bookmarksHtml;
 
@@ -100,12 +102,33 @@
 		// console.log(bookmarksHtml);
 	}
 
+	//======= Function for removing bookmarks
+	
+	function removeBookmark(e) {
+
+		if (!e.target.matches('.glyphicon-remove')) return;
+
+		// remove from the bookmarks using '.splice'
+		// fill the list
+		// store the list back to localStorage
+		// find the index of what is being clicked
+		
+
+		const index = e.target.parentNode.dataset.id;
+		bookmarks.splice(index, 1);
+		fillBookmarksList(bookmarks);
+		storeBookmarks(bookmarks);
+
+		// console.dir(index);
+
+	}
 
 	function storeBookmarks(bookmarks = []){
 		localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
 	}
 
 	bookmarkForm.addEventListener('submit', createBookmark);
+	bookmarksList.addEventListener('click',removeBookmark);
 
 
 
