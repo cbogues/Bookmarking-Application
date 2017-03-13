@@ -110,7 +110,8 @@ body.show-floater .overlay {
 	border-radius: 3px;
 	background-image:url('https://avatars3.githubusercontent.com/u/3903409?v=3&s=460');
 	background-size: cover;
-	width: 80px;
+	background-position: top center;
+	width: 120px;
 	height: 60px;
 	margin-right: 20px;
 }
